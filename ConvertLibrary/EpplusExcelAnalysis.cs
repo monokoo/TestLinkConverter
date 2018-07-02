@@ -9,13 +9,13 @@ using TransferLibrary;
 
 namespace ConvertLibrary
 {
-    public class EpplusExcelAnalysis
+    public class EPPlusExcelAnalysis
     {
-        private readonly ILog _logger = LogManager.GetLogger(typeof(EpplusExcelAnalysis));
+        private readonly ILog _logger = LogManager.GetLogger(typeof(EPPlusExcelAnalysis));
         private ExcelPackage excelPackage;
 
 
-        public EpplusExcelAnalysis(string excelFilePath)
+        public EPPlusExcelAnalysis(string excelFilePath)
         {
             if (string.IsNullOrEmpty(excelFilePath))
             {

@@ -42,11 +42,6 @@
     <Reference Include="Microsoft.CSharp">
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\DLL\Microsoft.Office.Interop.Excel.dll</HintPath>
-    </Reference>
     <Reference Include="System">
       <Private>True</Private>
     </Reference>
@@ -71,9 +66,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonHelper.cs" />
-    <Compile Include="EpplusExcelAnalysis.cs" />
-    <Compile Include="ExcelAnalysis.cs" />
-    <Compile Include="ExcelHandler.cs" />
+    <Compile Include="EPPlusExcelAnalysis.cs" />
+    <Compile Include="EPPlusExcelHandler.cs" />
     <Compile Include="OutputDisplay.cs" />
     <Compile Include="XmlHandler.cs" />
     <Compile Include="XmlAnalysis.cs" />

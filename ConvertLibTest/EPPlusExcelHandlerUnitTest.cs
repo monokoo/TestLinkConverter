@@ -7,7 +7,7 @@ using TransferModel;
 namespace TransferLibTest
 {
     [TestClass]
-    public class ExcelHandlerUnitTest
+    public class EPPlusExcelHandlerUnitTest
     {
         private List<TestCase> _testCaseList;
 
@@ -15,7 +15,7 @@ namespace TransferLibTest
         [TestInitialize]
         public void SetUp()
         {
-            string filepath = @"G:\Code\TestLinkTransfer\trunk\Resource\CRM.xml";
+            string filepath = @"E:\testsuite-deep.xml";
 
             XmlAnalysis xmlAnalysis = new XmlAnalysis(filepath);
             XmlToModel xtm = new XmlToModel(xmlAnalysis.GetAllTestCaseNodes());
@@ -25,7 +25,7 @@ namespace TransferLibTest
         [TestMethod]
         public void WriteExcelTest()
         {
-            var eh = new ExcelHandler(this._testCaseList);
+            var eh = new EPPlusExcelHandler(this._testCaseList);
             eh.WriteExcel();
 
             Assert.AreEqual(0,0);

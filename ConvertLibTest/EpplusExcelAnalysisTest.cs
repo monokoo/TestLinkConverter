@@ -5,16 +5,16 @@ using ConvertLibrary;
 namespace ConvertLibTest
 {
     [TestClass]
-    public class EpplusExcelAnalysisTest
+    public class EPPlusExcelAnalysisTest
     {
-        private EpplusExcelAnalysis epplusExcelAnalysis;
+        private EPPlusExcelAnalysis epplusExcelAnalysis;
 
         [TestInitialize]
         public void SetUp()
         {
             string filePath = @"E:\Github\TestLinkConverter\Resource\TestCase.xlsx";
 
-            this.epplusExcelAnalysis = new EpplusExcelAnalysis(filePath);
+            this.epplusExcelAnalysis = new EPPlusExcelAnalysis(filePath);
         }
 
         [TestMethod]

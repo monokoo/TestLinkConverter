@@ -111,7 +111,7 @@ namespace TestLinkTransfer
         {
             try
             {
-                EpplusExcelAnalysis excelAnalysis = new EpplusExcelAnalysis(fileDir);
+                EPPlusExcelAnalysis excelAnalysis = new EPPlusExcelAnalysis(fileDir);
                 tcDic = excelAnalysis.ReadExcel();
                 XmlHandler xh = new XmlHandler(tcDic);
                 xh.WriteXml();
@@ -138,7 +138,7 @@ namespace TestLinkTransfer
                 this.tcDic = new Dictionary<string, List<TestCase>>();
                 tcDic.Add("TestCase", tcList);
 
-                ExcelHandler eh = new ExcelHandler(tcList);
+                EPPlusExcelHandler eh = new EPPlusExcelHandler(tcList);
                 eh.WriteExcel();
             }
             catch (Exception ex)
