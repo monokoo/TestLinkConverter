@@ -131,7 +131,7 @@ namespace ConvertLibrary
                     }
                     tc = new TestCase();
 
-                    tc.ExternalId = string.Format($"{currentCell.Text.ToString()}_{new Random().Next(0, 10000)}");
+                    tc.ExternalId = string.Format($"{currentCell.Text.ToString()}{DateTime.Now.ToString("yyyyMMddhhmmss")}");
 
                     tc.Name = eWorksheet.Cells[i, 2].Text.ToString();
 
