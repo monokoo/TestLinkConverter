@@ -23,7 +23,17 @@ namespace TransferLibrary
 
         public List<TestCase> OutputTestCases()
         {
-            return _sourceNodes.Select(this.NodeToModel).ToList();
+            List<TestCase> tclist = new List<TestCase>();
+            foreach(var node in this._sourceNodes)
+            {
+                var tcmodel = this.NodeToModel(node);
+                if ( tcmodel != null)
+                {
+                    tclist.Add(tcmodel);
+                } 
+            }
+            return tclist;
+            //return _sourceNodes.Select(this.NodeToModel).ToList();
         }
 
         /// <summary>
@@ -47,6 +57,7 @@ namespace TransferLibrary
             {
                 this._logger.Error("用例名称为空", ex);
                 OutputDisplay.ShowMessage("用例名称为空", Color.Red);
+                return null;
             }
             
                
