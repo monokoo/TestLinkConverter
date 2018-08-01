@@ -57,7 +57,7 @@ namespace TransferLibrary
         /// <returns>处理后字符串</returns>
         private static string DelLinsTags(string sourceStr)
         {
-            string newStr = sourceStr.Replace("\n", "").Replace("\r", "").Replace("\t","");
+            string newStr = sourceStr.Replace("\n", "").Replace("\r", "").Replace("\t","").Replace("&rdquo;", "\"").Replace("&ldquo;", "\"");
             return newStr;
         }
 

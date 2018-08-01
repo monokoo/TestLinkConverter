@@ -39,7 +39,7 @@ namespace TransferLibrary
             ExcelWorksheet workSheet = excelPackage.Workbook.Worksheets[1];
             this.WriteInWorkSheet(workSheet);
 
-            string saveDir = fileName.Replace("TestCaseTemplate.xlsx", $"TestCase_{DateTime.Now.ToString("HHmmss")}.xlsx");
+            string saveDir = fileName.Replace("TestCaseTemplate.xlsx", $"TestCase_{DateTime.Now.ToString("yyyyMMddHHmmss")}.xlsx");
             using (System.IO.Stream stream = new System.IO.FileStream(saveDir, System.IO.FileMode.Create))
             {
                 excelPackage.SaveAs(stream);

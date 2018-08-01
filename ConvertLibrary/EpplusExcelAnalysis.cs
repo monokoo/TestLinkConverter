@@ -97,8 +97,7 @@ namespace ConvertLibrary
 
             for(int i=1; i <= eWorksheet.Dimension.End.Row; i++)
             {
-                if(eWorksheet.Cells[i,1].Text != null && eWorksheet.Cells[i,1].Text.ToString() != string.Empty &&
-                    !eWorksheet.Cells[i, 1].Text.ToString().Equals("END"))
+                if(eWorksheet.Cells[i,1].Text != null && !eWorksheet.Cells[i, 1].Text.ToString().Equals("END"))
                 {
                     continue;
                 }
