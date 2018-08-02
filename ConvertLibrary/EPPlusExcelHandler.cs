@@ -60,15 +60,23 @@ namespace TransferLibrary
                 workSheet.Cells[iFlag, 5].Value = node.Summary;
                 workSheet.Cells[iFlag, 6].Value = node.Preconditions;
                 int iMerge = 0;
-                foreach(TestStep step in node.TestSteps)
+                if(node.TestSteps == null)
                 {
-                    workSheet.Cells[iFlag, 7].Value = CommonHelper.DelTags(step.Actions);
-                    workSheet.Cells[iFlag, 8].Value = CommonHelper.DelTags(step.ExpectedResults);
+                    workSheet.Cells[iFlag, 7].Value = string.Empty;
+                    workSheet.Cells[iFlag, 8].Value = string.Empty;
                     iFlag++;
-                    iMerge++;
                 }
-
-                this.MergeCells(workSheet, iMerge, iFlag - iMerge);
+                else
+                {
+                    foreach (TestStep step in node.TestSteps)
+                    {
+                        workSheet.Cells[iFlag, 7].Value = CommonHelper.DelTags(step.Actions);
+                        workSheet.Cells[iFlag, 8].Value = CommonHelper.DelTags(step.ExpectedResults);
+                        iFlag++;
+                        iMerge++;
+                    }
+                    this.MergeCells(workSheet, iMerge, iFlag - iMerge);
+                }
                 Thread.Sleep(1000);
             }
             workSheet.Cells[iFlag++, 1].Value = "END";
