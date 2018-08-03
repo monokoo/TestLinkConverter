@@ -113,6 +113,7 @@ namespace ConvertLibrary
                 
                 if (currentCell.Value is null)
                 {
+                    
                     TestStep ts = new TestStep();
                     ts.StepNumber = tc.TestSteps.Count + 1;
                     ts.ExecutionType = ExecType.手动;
@@ -135,7 +136,7 @@ namespace ConvertLibrary
                     }
                     tc = new TestCase();
 
-                    tc.ExternalId = string.Format($"{currentCell.Text.ToString()}{DateTime.Now.ToString("yyyyMMddhhmmss")}");
+                    tc.ExternalId = string.Format($"{currentCell.Text.ToString()}{DateTime.Now.ToString("yyyyMMddHHmmssffff")}");
 
                     tc.Name = eWorksheet.Cells[i, 2].Text.ToString();
 

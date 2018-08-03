@@ -77,7 +77,7 @@ namespace TransferLibrary
                     }
                     this.MergeCells(workSheet, iMerge, iFlag - iMerge);
                 }
-                Thread.Sleep(1000);
+                Thread.Sleep(50);
             }
             workSheet.Cells[iFlag++, 1].Value = "END";
         }

@@ -56,7 +56,7 @@ namespace TransferLibrary
                     }
                     fieldsStr += $"<steps>{tsStr}</steps>";
                     string tcStr = $"<testcase name=\"{testCase.Name}\">{fieldsStr}</testcase>";
-                    Thread.Sleep(1000);
+                    Thread.Sleep(50);
                     tcStrList.Add(tcStr);
                 }
 
